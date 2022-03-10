@@ -17,9 +17,9 @@ namespace AOT
 {
 
 
-    public partial class Form1 : Form
+    public partial class AoT : Form
     {
-        public Form1()
+        public AoT()
         {
             InitializeComponent();
         }
@@ -54,7 +54,7 @@ namespace AOT
         {
             if (comboBox1.Text != "Aktives Fenster Auswählen")
             {
-                Methods.AoT_off(comboBox1.Text.ToString() + " - AoT");
+                Methods.AoT_off(comboBox1.Text.ToString());
             }
             else
             {

@@ -1,6 +1,6 @@
 ﻿namespace AOT
 {
-    partial class Form1
+    partial class AoT
     {
         /// <summary>
         /// Erforderliche Designervariable.
