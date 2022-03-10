@@ -26,15 +26,7 @@ namespace AOT
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            comboBox1.Items.Clear();
-            Process[] processlist = Process.GetProcesses();
-            foreach (Process process in processlist)
-            {
-                if (!String.IsNullOrEmpty(process.MainWindowTitle))
-                {
-                    comboBox1.Items.Add(process.MainWindowTitle.ToString());
-                }
-            }
+            ListUpdate();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -45,10 +37,10 @@ namespace AOT
             }
             else
             {
-                MessageBox.Show("Bitte Fenster Auswählen");
+                ErrorNoWindow();
             }
-                
-		}
+            ListUpdate();
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -58,11 +50,17 @@ namespace AOT
             }
             else
             {
-                MessageBox.Show("Bitte Fenster Auswählen");
+                ErrorNoWindow();
             }
+            ListUpdate();
         }
 
         private void button3_Click(object sender, EventArgs e)
+        {
+            ListUpdate();
+        }
+
+        private void ListUpdate()
         {
             comboBox1.Items.Clear();
             Process[] processlist = Process.GetProcesses();
@@ -73,6 +71,11 @@ namespace AOT
                     comboBox1.Items.Add(process.MainWindowTitle.ToString());
                 }
             }
+        }
+
+        private void ErrorNoWindow()
+        {
+            MessageBox.Show("Bitte Fenster Auswählen");
         }
     }
 }
