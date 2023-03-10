@@ -40,6 +40,9 @@ namespace AOT
             UpdateMainWindowCombobox();
             UpdateMainWindowButton();
 
+
+
+
             string _StartupValueWindowTitle = ((App)Application.Current)._WindowTitle;
 
             if(_StartupValueWindowTitle != null )
