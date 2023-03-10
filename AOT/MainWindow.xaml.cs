@@ -88,7 +88,6 @@ namespace AOT
             {
                 MainWindowButton.Content = "Aktivieren";
             }
-
         }
 
 
