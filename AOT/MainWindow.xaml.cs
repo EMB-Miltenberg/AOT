@@ -90,10 +90,6 @@ namespace AOT
             {
                 MainWindowButton.Content = "Aktivieren";
             }
-            else
-            {
-                MainWindowButton.IsEnabled = false;
-            }
         }
 
 
