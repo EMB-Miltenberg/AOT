@@ -82,18 +82,13 @@ namespace AOT
 
         private void UpdateMainWindowButton()
         {
-            if (MainWindowComboBox.Text.Length > 0)
+            if (MainWindowComboBox.Text.Contains("- AoT") == true)
             {
-                if (MainWindowComboBox.Text.Contains("- AoT") == true)
-                {
-                    MainWindowButton.Content = "Deaktivieren";
-                }
-                else
-                {
-                    MainWindowButton.Content = "Aktivieren";
-                }
-
-                MainWindowButton.IsEnabled = true;
+                MainWindowButton.Content = "Deaktivieren";
+            }
+            else
+            {
+                MainWindowButton.Content = "Aktivieren";
             }
             else
             {
