@@ -95,10 +95,7 @@ namespace AOT
 
                 MainWindowButton.IsEnabled = true;
             }
-            else
-            {
-                MainWindowButton.IsEnabled = false;
-            }
+
         }
 
 
