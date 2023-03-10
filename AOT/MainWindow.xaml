@@ -1,0 +1,33 @@
+﻿<Window x:Class="AOT.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AOT"
+        mc:Ignorable="d"
+        Title="AOT" Height="120" Width="375" WindowState="Normal" ResizeMode="NoResize">
+    <Grid>
+        <ComboBox Name="MainWindowComboBox" 
+                  SelectionChanged="MainWindowComboBox_SelectionChanged" 
+                  Margin="10,10,10,0" 
+                  VerticalAlignment="Top"  
+                  IsEditable="True">
+        </ComboBox>
+        <Button Name="MainWindowButton" 
+                Click="MainWindowButton_Click" 
+                Content="Aktivieren" 
+                Width="80" 
+                Height="20" 
+                Margin="10,40,10,0" 
+                VerticalAlignment="Top" 
+                HorizontalAlignment="Right"/>
+        <Button x:Name="MainWindowButtonRefresh" 
+            Click="MainWindowButtonRefresh_Click" 
+            Content="Aktualisieren" 
+            Width="80" 
+            Height="20" 
+            Margin="0,40,95,0" 
+            VerticalAlignment="Top" 
+            HorizontalAlignment="Right"/>
+    </Grid>
+</Window>
