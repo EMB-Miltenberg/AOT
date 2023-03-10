@@ -40,9 +40,6 @@ namespace AOT
             UpdateMainWindowCombobox();
             UpdateMainWindowButton();
 
-
-
-
             string _StartupValueWindowTitle = ((App)Application.Current)._WindowTitle;
 
             if(_StartupValueWindowTitle != null )
@@ -82,18 +79,14 @@ namespace AOT
 
         private void UpdateMainWindowButton()
         {
-            if (MainWindowComboBox.Text.Length > 0)
-            {
-                if (MainWindowComboBox.Text.Contains("- AoT") == true)
-                {
-                    MainWindowButton.Content = "Deaktivieren";
-                }
-                else
-                {
-                    MainWindowButton.Content = "Aktivieren";
-                }
 
-                MainWindowButton.IsEnabled = true;
+            if (MainWindowComboBox.Text.Contains("- AoT") == true)
+            {
+                MainWindowButton.Content = "Deaktivieren";
+            }
+            else
+            {
+                MainWindowButton.Content = "Aktivieren";
             }
 
         }
