@@ -1,1 +1,4 @@
 # AOT
+
+
+-Window=Editor
